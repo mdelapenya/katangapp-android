@@ -1,6 +1,5 @@
 package es.craftsmanship.toledo.katangapp.activities;
 
-import es.craftsmanship.toledo.katangapp.models.BusStopResult;
 import es.craftsmanship.toledo.katangapp.models.QueryResult;
 
 import android.content.Intent;
@@ -10,13 +9,14 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-
-import java.util.List;
+import android.support.v7.widget.RecyclerView.Adapter;
 
 /**
  * @author Cristóbal Hermida
  */
 public class ShowStopsActivity extends AppCompatActivity {
+
+    private Adapter busStopAdapter = new StopsAdapter();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,13 +28,13 @@ public class ShowStopsActivity extends AppCompatActivity {
 
         QueryResult queryResult = (QueryResult) intent.getSerializableExtra("queryResult");
 
-        List<BusStopResult> busStopResults = queryResult.getResults();
+        ((StopsAdapter)busStopAdapter).addBusStops(queryResult.getResults());
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.stops);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        recyclerView.setAdapter(new StopsAdapter(busStopResults));
+        recyclerView.setAdapter(busStopAdapter);
     }
 
 }

@@ -25,14 +25,21 @@ import java.util.List;
  */
 public class StopsAdapter extends RecyclerView.Adapter<StopsAdapter.StopsViewHolder> {
 
-    private final List<BusStopResult> stops;
+    private List<BusStopResult> stops;
     private Context context;
     private RecyclerView lineas;
     private TextView address =null;
     private TextView distance =null;
 
-    public StopsAdapter(List<BusStopResult> stops) {
-        this.stops = stops;
+    public void addBusStops(List<BusStopResult> busStops) {
+        if (stops == null) {
+            this.stops = busStops;
+
+            return;
+        }
+
+        stops.clear();
+        stops.addAll(busStops);
     }
 
     @Override
