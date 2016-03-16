@@ -1,22 +1,22 @@
 package es.craftsmanship.toledo.katangapp.activities;
 
-import es.craftsmanship.toledo.katangapp.models.BusStopResult;
-import es.craftsmanship.toledo.katangapp.models.QueryResult;
-
 import android.content.Intent;
-
 import android.os.Bundle;
-
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import java.util.List;
 
+import es.craftsmanship.toledo.katangapp.models.BusStopResult;
+import es.craftsmanship.toledo.katangapp.models.QueryResult;
+
 /**
  * @author Cristóbal Hermida
  */
 public class ShowStopsActivity extends AppCompatActivity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
