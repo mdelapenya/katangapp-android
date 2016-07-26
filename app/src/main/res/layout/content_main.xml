@@ -39,9 +39,9 @@
         android:id="@+id/searchComponentsFrame"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
         android:layout_below="@id/seekBar"
-        android:layout_alignParentBottom="true">
+        android:layout_centerHorizontal="true">
 
         <at.markushi.ui.CircleButton
             android:id="@+id/searchButton"
@@ -55,9 +55,9 @@
             android:id="@+id/searchProgressBar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="10dp"
-            android:indeterminateTintMode="src_atop"
             android:indeterminateTint="@android:color/black"
+            android:indeterminateTintMode="src_atop"
+            android:padding="10dp"
             android:visibility="invisible" />
     </FrameLayout>
 

@@ -3,19 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
     android:layout_marginBottom="2dp"
     android:layout_marginLeft="@dimen/activity_horizontal_margin"
     android:layout_marginRight="@dimen/activity_horizontal_margin"
     android:layout_marginTop="2dp"
+    android:orientation="horizontal"
     app:cardCornerRadius="4dp"
     app:cardElevation="8dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="6dp"
-        android:background="@android:color/white">
+        android:background="@android:color/white"
+        android:padding="6dp">
 
         <ImageView
             android:id="@+id/busStopLogo"
@@ -29,8 +29,8 @@
             android:id="@+id/busStopId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="4dp"
             android:layout_toRightOf="@+id/busStopLogo"
+            android:paddingBottom="4dp"
             android:textColor="@color/katanga_grey_dark"
             android:textSize="14sp" />
 
@@ -38,8 +38,8 @@
             android:id="@+id/busStopAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/busStopLogo"
             android:layout_below="@+id/busStopId"
+            android:layout_toRightOf="@+id/busStopLogo"
             android:gravity="left"
             android:textColor="@android:color/black"
             android:textSize="18sp" />

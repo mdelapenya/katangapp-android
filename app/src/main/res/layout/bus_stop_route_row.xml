@@ -6,14 +6,14 @@
 
     <LinearLayout
         android:id="@+id/cell_line"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="45dp"
-        android:gravity="center_vertical"
         android:layout_weight="3"
-        android:padding="6dp"
         android:background="@color/katanga_background_light"
+        android:gravity="center_vertical"
+        android:minHeight="45dp"
+        android:orientation="horizontal"
+        android:padding="6dp"
         >
 
         <TextView
@@ -28,21 +28,21 @@
 
     <LinearLayout
         android:id="@+id/cell_time"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:minHeight="45dp"
         android:layout_weight="1"
         android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:minHeight="45dp"
+        android:orientation="horizontal"
         android:padding="6dp">
 
         <TextView
             android:id="@+id/time"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingRight="50dp"
             android:gravity="end"
+            android:paddingRight="50dp"
             android:textColor="@android:color/black"
             android:textSize="18sp" />
     </LinearLayout>

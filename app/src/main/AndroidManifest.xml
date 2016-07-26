@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="es.craftsmanship.toledo.katangapp">
+<manifest package="es.craftsmanship.toledo.katangapp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -21,16 +21,16 @@
         </activity>
 
         <activity android:name=".activities.FavoritesActivity"
-            android:theme="@style/GreyAppTheme"
-            android:label="@string/favorites_bus_stops">
+            android:label="@string/favorites_bus_stops"
+            android:theme="@style/GreyAppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="es.craftsmanship.toledo.katangapp.activities.MainActivity" />
         </activity>
 
         <activity android:name=".activities.ShowBusStopsActivity"
-            android:theme="@style/GreyAppTheme"
-            android:launchMode="singleTop"/>
+            android:launchMode="singleTop"
+            android:theme="@style/GreyAppTheme"/>
 
         <activity android:name=".activities.SplashActivity"
             android:screenOrientation="portrait"
