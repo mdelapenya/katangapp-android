@@ -1,5 +1,6 @@
 package es.craftsmanship.toledo.katangapp.activities;
 
+import es.craftsmanship.toledo.katangapp.adapters.BusStopRoutesAdapter;
 import es.craftsmanship.toledo.katangapp.models.BusStop;
 import es.craftsmanship.toledo.katangapp.models.BusStopResult;
 import es.craftsmanship.toledo.katangapp.models.RouteResult;
@@ -40,7 +41,7 @@ public class StopsAdapter extends RecyclerView.Adapter<StopsAdapter.StopsViewHol
         context = parent.getContext();
 
         View view = LayoutInflater.from(context)
-            .inflate(R.layout.stop, parent, false);
+            .inflate(R.layout.bus_stop_row, parent, false);
 
         return new StopsViewHolder(view);
     }
@@ -76,7 +77,7 @@ public class StopsAdapter extends RecyclerView.Adapter<StopsAdapter.StopsViewHol
             int size = results.size();
 
             lines.setMinimumHeight(size * 100);
-            lines.setAdapter(new LinesAdapter(results));
+            lines.setAdapter(new BusStopRoutesAdapter(results));
 
             BusStop busStop = stop.getBusStop();
 
