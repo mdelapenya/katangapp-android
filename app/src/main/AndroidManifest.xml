@@ -31,7 +31,6 @@
         <activity android:name=".SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -47,6 +46,14 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
+        <activity
+            android:name=".RouteMapActivity"
+            android:label="@string/title_activity_route_map"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ShowBusStopsActivity" />
+        </activity>
         <activity
             android:name=".BusStopActivity"
             android:label="@string/title_activity_bus_stop"
