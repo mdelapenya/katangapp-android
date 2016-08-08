@@ -6,6 +6,7 @@ import es.craftsmanship.toledo.katangapp.interactors.KatangaInteractor;
 import es.craftsmanship.toledo.katangapp.interactors.KatangaInteractorFactoryUtil;
 import es.craftsmanship.toledo.katangapp.models.BusStopResult;
 import es.craftsmanship.toledo.katangapp.models.QueryResult;
+import es.craftsmanship.toledo.katangapp.models.Route;
 
 import android.content.Intent;
 
@@ -73,6 +74,23 @@ public class ShowBusStopsActivity extends BaseGeoLocatedActivity {
         }
         else {
             processEmptyResults();
+        }
+    }
+
+    @Subscribe
+    public void routesReceived(Error error) {
+        processEmptyResults();
+    }
+
+    @Subscribe
+    public void routesReceived(Route route) {
+        if (route != null) {
+            Intent intent = new Intent(this, RouteMapActivity.class);
+
+            intent.putExtra("route", route);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+            startActivity(intent);
         }
     }
 
