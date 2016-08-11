@@ -67,7 +67,7 @@ public class BusStopsAdapter extends RecyclerView.Adapter<BusStopsAdapter.BusSto
             super(itemView);
 
             address = (TextView) itemView.findViewById(R.id.stop_address);
-            busStopIcon = (ImageView) itemView.findViewById(R.id.logo);
+            busStopIcon = (ImageView) itemView.findViewById(R.id.bus_stop_icon);
             distance = (TextView) itemView.findViewById(R.id.stop_distance);
             lines = (RecyclerView) itemView.findViewById(R.id.lines);
 
